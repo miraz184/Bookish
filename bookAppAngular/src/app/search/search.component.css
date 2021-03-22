@@ -1,0 +1,72 @@
+.searby-background{
+    background: url(../../assets/images/book-search-background.jpg);
+    height: 200vh;
+    width: 100vw;
+    margin: 0px;
+}
+#search {
+    width: 50%;
+    height: 50px;
+    padding-left: 5%;
+
+}
+.container{
+    display: flexbox;
+    justify-content: center;      
+    height: 100%;
+    background-color: aqua;
+}
+button{
+    height : 50px;
+    width : 80px;
+    font-size: 13px;
+    background : #fff;
+}
+.fav-button{
+align-content: flex-end;
+width:50px ;
+}
+p{
+    font-size: small;
+}
+h4{
+    font-size: small;
+}
+.content{
+    margin: 2px;
+}
+.results-container{
+    height : 400px;
+}
+.card-section{
+    max-width: 400px;
+    display: list-item;
+}
+.result{
+    padding: 2%;
+    font-size: small;
+}
+.searchBar{
+    /* display: flex; */
+    width: 80vw;
+    justify-content: center;
+    margin: 5px;
+    /* padding-right: 10px; */
+    border-radius: 10px;
+}
+.searchBar,button{
+    margin-right: 10px;
+}
+/* .cardBody{
+    /* margin: 30px; */
+    /* background-color: aqua; */
+/*} */
+.bookCard{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.grid-contend-style{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

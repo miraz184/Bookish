@@ -1,0 +1,55 @@
+version: '3'
+services:
+ authserviceust:
+     image: authenticationustapi
+     build: AuthenticationService
+     ports: 
+      - "8090:80"
+     depends_on: 
+      - sqlserverustservice
+     environment:
+      SQL_USTCONNECTION: "server=sqlserverustservice;database=DockerauthUSTDb;User Id=sa;password=pass@123"
+ userservicebookish:
+     image: userservicebookishapi
+     build: UserService
+     ports: 
+      - "8089:80"
+     depends_on:
+      - mongoustservice
+     environment:
+      MONGO_USTCONNECTION: "mongodb://mongoustservice:27017"
+
+ favouriteservicebookish:
+     image: favouriteservicebookishapi
+     build: FavouriteService
+     ports: 
+      - "8088:80"
+     depends_on:
+      - mongoustservice
+     environment:
+      MONGO_USTCONNECTION: "mongodb://mongoustservice:27017"
+
+ recommendservicebookish:
+     image: recommendservicebookishapi
+     build: RecommendService
+     ports: 
+      - "8087:80"
+     depends_on:
+      - mongoustservice  
+
+      
+     environment:
+      MONGO_USTCONNECTION: "mongodb://mongoustservice:27017"
+
+ sqlserverustservice:
+     image: mcr.microsoft.com/mssql/server:2017-latest
+     ports: 
+      - "1433:1433"
+     environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "pass@123"
+
+ mongoustservice:
+     image: mongo
+     ports:
+      - "27017:27017"

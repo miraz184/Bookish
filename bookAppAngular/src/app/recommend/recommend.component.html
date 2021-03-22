@@ -1,0 +1,14 @@
+<div class="row row-cols-1 ">
+    <label class="error-message">{{ errMessage }}</label>
+	<div class=" col col-md-6 col-lg-4 col-sm-12 results-container" *ngFor="let bookValue of books">
+	  <div class="card cards-view">
+		
+		<mat-card-title class="title">{{bookValue.title}}</mat-card-title>
+		<mat-card-content>
+		  <p>
+		{{bookValue.id}}
+		{{bookValue.createdBy}}
+		{{bookValue.author}}
+		  </p>
+		</mat-card-content>
+	</div>

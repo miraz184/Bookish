@@ -1,0 +1,24 @@
+.customvalidation-error{
+    color: red;
+}
+.signup-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backgrounglogin{
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding-top: 10px;
+    background: url(../../assets/images/book-background-img.jpg);
+    background-size: cover;
+    height: 100%;
+}
+.login-btn-style{
+    display: flex;
+    justify-content: center;
+}
+.jumbotron{
+    opacity: 95%;
+}

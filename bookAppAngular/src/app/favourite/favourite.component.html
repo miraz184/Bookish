@@ -1,0 +1,19 @@
+<div class="favDesign row row-cols-1 ">
+	<header class="example-button-row">
+		<button mat-raised-button routerLink="/book-search" style="opacity: 80%;">Go To Book Search</button>
+	</header>
+	<mat-grid-list cols="3" rowHeight="4:2" class="card-body">
+		<mat-grid-tile *ngFor="let bookValue of result" class="bookCard"
+			style="background-color: blanchedalmond; opacity: 90%;">
+			<div class="deleteContent" style="color: mediumvioletred;">
+				Title: {{bookValue.title}} <br>
+				Author:{{bookValue.author}} <br>
+			</div>
+			<div class="deleteButton">
+				<button mat-fab color="warn" aria-label="Example icon button with a delete icon"
+					(click)="removeFromFavourote(bookValue.bookId,bookValue.createdBy)">
+					<mat-icon>delete</mat-icon>
+				</button>
+			</div>
+		</mat-grid-tile>
+	</mat-grid-list>

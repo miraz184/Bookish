@@ -1,0 +1,21 @@
+.favDesign{
+    background: url(../../assets/images/book-search-background.jpg);
+    height: 200vh;
+    width: 100vw;
+    margin: 0px;
+}
+.deleteButton{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.deleteContent{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

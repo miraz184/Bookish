@@ -1,0 +1,35 @@
+<body class="searby-background">
+   <div class="searchBar">
+      <form class="d-flex">
+         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+            style="height: 8vh; padding-left: 50px; margin: 15px; align-items: center;" #search id="search">
+         <button (click)="OnSearch(search.value)" class="btn btn-outline-success"
+            style="height: 8vh; margin-left: 5px; margin: 15px; " type="submit">Search</button>
+      </form>
+      
+   </div>
+   <div *ngIf="books" id="f">
+     
+      <mat-grid-list cols="3" rowHeight="4:2" class="card-body" >
+
+         <mat-grid-tile *ngFor="let bookValue of books" class="bookCard" style="background-color: blanchedalmond; opacity: 90%;">
+          
+               <p *ngIf="bookValue.volumeInfo.imageLinks">
+                  <img src={{bookValue.volumeInfo.imageLinks.smallThumbnail}} />
+               </p>
+          
+            <div class="grid-contend-style" style=" margin-left: 5px;">
+        
+               Author: {{bookValue.volumeInfo.authors}} <br>
+               Title: {{bookValue.volumeInfo.title}}
+            </div>
+            <div>
+               <button class="fav-button" (click)="addFavourite(bookValue)" mat-icon-button color="dark" mat-mini-fab
+                  aria-label="Example icon-button with a heart icon" style="margin-left: 10px;">
+                  <mat-icon>favorite</mat-icon>
+               </button>
+            </div>            
+         </mat-grid-tile>
+      </mat-grid-list>
+   </div>
+</body>
